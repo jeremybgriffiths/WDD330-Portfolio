@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1</title>
+</head>
+<body>
+    <h1>Week 1</h1>
+    <h2>Notes</h2>
+    <h3>Local Storage</h3>
+    <p>Local storage uses key-value pairs to store user data in the browser.
+        Users can access this data even after refreshing the page.
+    </p>
+    <h2>Code Examples</h2>
+    <p> function clickCounter() { <br>
+          if (typeof(Storage) !== "undefined") { <br>
+            if (localStorage.clickcount) { <br>
+              localStorage.clickcount = Number(localStorage.clickcount)+1; <br>
+            } else { <br>
+              localStorage.clickcount = 1; <br>
+            } <br>
+            document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s)."; <br>
+          } else { <br>
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage..."; <br>
+          } <br>
+        } <br>
+    </p>
+</body>
+</html>
