@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1</title>
+</head>
+
+<body>
+    <h1>Week 3</h1>
+    <h2>Notes</h2>
+    <h3>Array Methods</h3>
+    <ul>
+        <li>The sort() method sorts the items of an array.</li>
+        <li>The filter() method filters an array using whatever criteria you pass it.</li>
+        <li>The map() method creates a new array with the results of calling a function for every array element.</li>
+        <li>The reduce() method reduces the array to a single value. The reduce() method executes a provided
+            function for each value of the array (from left-to-right). The return value of the function is stored
+            in an accumulator (result/total).</li>
+    </ul>
+    <h2>Code Examples</h2>
+    <code>
+      // Array.prototype.filter() <br>
+      // 1. Filter the list of inventors for those who were born in the 1500's <br>
+      const sixteenthCenturyInventors = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600); <br>
+      console.log(sixteenthCenturyInventors); <br><br>
+
+      // Array.prototype.map() <br>
+      // 2. Give us an array of the inventors' first and last names <br>
+      const inventorNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`); <br>
+      console.log(inventorNames); <br><br>
+
+      // Array.prototype.sort() <br>
+      // 3. Sort the inventors by birthdate, oldest to youngest <br>
+      const sortedInventors = inventors.sort((a, b) => a.year-b.year); <br>
+      console.log(sortedInventors); <br><br>
+
+      // Array.prototype.reduce() <br>
+      // 4. How many years did all the inventors live? <br>
+      const totalYears = inventors.reduce((total, inventor) => {return total + (inventor.passed - inventor.year)}, 0); <br>
+      console.log(totalYears); <br>
+    </code>
+</body>
+
+</html>
