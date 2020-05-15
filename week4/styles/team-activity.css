@@ -1,0 +1,23 @@
+td {
+    height: 100px;
+    width: 100px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 5em;
+    text-align: center;
+}
+
+table td:last-child {
+    border-right: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
