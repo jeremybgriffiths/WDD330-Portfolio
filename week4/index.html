@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4</title>
+</head>
+
+<body>
+    <h1>Week 4</h1>
+    <h2>Notes</h2>
+    <h3>Classes</h3>
+    <ul>
+        <li>All instances of a class or constructor function inherit all the properties and methods of its prototype.</li>
+        <li>The prototype is live, so new properties and methods can be added to existing instances.</li>
+        <li>A mixin method can be used to add properties and methods from other objects without creating an inheritance chain.</li>
+        <li>Composition over inheritance is a design pattern where objects are composed from 'building-block' objects,
+            rather than inheriting all their properties and methods from a parent class.</li>
+    </ul>
+    <h2>Code Examples</h2>
+    <code>
+        // How to create a class in JavaScript<br>
+        class Dice { <br>
+        constructor(sides=6) { <br>
+        this.sides = sides; <br>
+        } <br>
+        roll() { <br>
+        return Math.floor(this.sides * Math.random() + 1) <br>
+        } <br>
+        } <br>
+    </code> <br>
+
+    <a href="team-activity.html">Team Activity</a>
+    <p>The team activity uses touch inputs so it only works in Chrome's mobile inspection view</p>
+</body>
+
+</html>
