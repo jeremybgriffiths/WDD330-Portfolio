@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="../index.html">Back to Portfolio</a>
     <h1>Week 3</h1>
     <h2>Notes</h2>
     <h3>Array Methods</h3>
@@ -21,25 +22,27 @@
     </ul>
     <h2>Code Examples</h2>
     <code>
-      // Array.prototype.filter() <br>
-      // 1. Filter the list of inventors for those who were born in the 1500's <br>
-      const sixteenthCenturyInventors = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600); <br>
-      console.log(sixteenthCenturyInventors); <br><br>
+        // Array.prototype.filter() <br>
+        // 1. Filter the list of inventors for those who were born in the 1500's <br>
+        const sixteenthCenturyInventors = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600);
+            <br>
+            console.log(sixteenthCenturyInventors); <br><br>
 
-      // Array.prototype.map() <br>
-      // 2. Give us an array of the inventors' first and last names <br>
-      const inventorNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`); <br>
-      console.log(inventorNames); <br><br>
+            // Array.prototype.map() <br>
+            // 2. Give us an array of the inventors' first and last names <br>
+            const inventorNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`); <br>
+            console.log(inventorNames); <br><br>
 
-      // Array.prototype.sort() <br>
-      // 3. Sort the inventors by birthdate, oldest to youngest <br>
-      const sortedInventors = inventors.sort((a, b) => a.year-b.year); <br>
-      console.log(sortedInventors); <br><br>
+            // Array.prototype.sort() <br>
+            // 3. Sort the inventors by birthdate, oldest to youngest <br>
+            const sortedInventors = inventors.sort((a, b) => a.year-b.year); <br>
+            console.log(sortedInventors); <br><br>
 
-      // Array.prototype.reduce() <br>
-      // 4. How many years did all the inventors live? <br>
-      const totalYears = inventors.reduce((total, inventor) => {return total + (inventor.passed - inventor.year)}, 0); <br>
-      console.log(totalYears); <br><br>
+            // Array.prototype.reduce() <br>
+            // 4. How many years did all the inventors live? <br>
+            const totalYears = inventors.reduce((total, inventor) => {return total + (inventor.passed - inventor.year)},
+            0); <br>
+            console.log(totalYears); <br><br>
     </code>
 
     <a href="index-START.html">Team Activity</a>
