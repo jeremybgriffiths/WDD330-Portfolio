@@ -1,0 +1,50 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #aeaeae;
+    margin: 0;
+    padding: 5px;
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-container {
+    display: flex;
+}
+
+#todo-nav li {
+    background-color: #e0e0e0;
+    margin: 5px;
+    padding: 5px;
+    border: solid black 1px;
+    border-radius: 4px;
+    list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#todo-container {
+    border: solid black 1px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 800px;
+}

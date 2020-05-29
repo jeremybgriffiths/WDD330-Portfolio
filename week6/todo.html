@@ -13,25 +13,27 @@
         <h1>Todo List</h1>
     </header>
 
-
-    <div id="todo-container">
-        <ul id="todo-list">
-
-        </ul>
-        <nav>
-            <ul id="todo-nav">
-                <li>tasks remaining</li>
-                <li>All</li>
-                <li>Active</li>
-                <li>Completed</li>
-            </ul>
-        </nav>
+    <div id="app-container">
+        <div id="todo-container">
+            <div id="list-container">
+                <ul id="todo-list">
+                </ul>
+            </div>
+            <div id="nav-container">
+                <p id="tasks-left">tasks left: </p>
+                <ul id="todo-nav">
+                    <li>All</li>
+                    <li>Active</li>
+                    <li>Completed</li>
+                </ul>
+            </div>
+        </div>
+        <div id="add-container">
+            <input type="text" name="add-text" id="add-text" placeholder="Add task">
+            <button id="add-button">Add Task</button>
+        </div>
     </div>
-    <div id="add-container">
-        <input type="text" name="add-text" id="add-text" placeholder="Add task">
-        <button id="add-button">Add Task</button>
-    </div>
-    <script src="./scripts/todo.js"></script>
+    <script src="./scripts/Main.js" type="module"></script>
 </body>
 
 </html>
