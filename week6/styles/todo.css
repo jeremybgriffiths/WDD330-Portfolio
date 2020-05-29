@@ -17,6 +17,13 @@ header {
     padding: 0;
 }
 
+#todo-list li {
+    position: relative;
+    padding: 5px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
 #nav-container {
     display: flex;
 }
@@ -47,4 +54,12 @@ h1 {
     margin-bottom: 10px;
     width: 80%;
     max-width: 800px;
+}
+
+.delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    margin-right: 5px;
 }

@@ -48,12 +48,13 @@ export default class TodoList {
             }
             li.id = task.id;
 
-            li.innerHTML = 
+            li.innerHTML =
                 `<div class="completed ${strikethrough}">
                 <input type="checkbox" id="task-${task.id}" value="${task.completed}" ${checked}>
                 <label for="task-${task.id}" >${task.content}</label>
+                <span class="delete">\u00D7</span>
                 </div>`;
-
+                
             document.querySelector('#todo-list').appendChild(li);
         });
     }
