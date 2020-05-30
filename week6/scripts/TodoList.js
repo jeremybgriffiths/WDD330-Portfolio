@@ -28,34 +28,39 @@ export default class TodoList {
         if (index !== -1) {
             this.todoList[index].completed = !this.todoList[index].completed;
             localStorage.setItem('todoList', JSON.stringify(this.todoList));
-            return true;
-        } else {
-            console.log("Failed to toggle taskId " + taskId);
-            return false;
         }
     }
 
     display() {
-        document.querySelector('#todo-list').innerHTML = "";
-        this.todoList.forEach(task => {            
-            let li = document.createElement("li");
+        document.querySelector('#todo-list').innerHTML = '';
+        let count = 0;
+        this.todoList.forEach(task => {
+            let li = document.createElement('li');
+            let div = document.createElement('div');
+            let checkbox = document.createElement('input');
+            let label = document.createElement('label');
+            let span2 = document.createElement('span');
 
-            let checked = "";
-            let strikethrough = "";
-            if (task.completed) {
-                checked = "checked";
-                strikethrough = "strikethrough";
-            }
+            checkbox.type = 'checkbox';
+            checkbox.className = 'completed';
+            checkbox.id = `task-${task.id}`;
+            checkbox.value = `${task.completed}`;
+                  
+            label.innerHTML = `${task.content}`;
+
+            span2.className = 'delete';
+            span2.innerHTML = '\u00D7';
+
+            div.appendChild(checkbox);
+            div.appendChild(label);
+            div.appendChild(span2);
+
             li.id = task.id;
+            li.appendChild(div);
 
-            li.innerHTML =
-                `<div class="completed ${strikethrough}">
-                <input type="checkbox" id="task-${task.id}" value="${task.completed}" ${checked}>
-                <label for="task-${task.id}" >${task.content}</label>
-                <span class="delete">\u00D7</span>
-                </div>`;
-                
             document.querySelector('#todo-list').appendChild(li);
+            count++;
         });
+        document.querySelector('#tasks-left').innerHTML = `tasks left: ${count}`;
     }
 }

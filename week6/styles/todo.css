@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background-color: #aeaeae;
+    background-color: lightblue;
     margin: 0;
     padding: 5px;
 }
@@ -26,10 +26,13 @@ header {
 
 #nav-container {
     display: flex;
+    max-width: 200px;
+    flex-direction: column;
+    align-items: left;
 }
 
 #todo-nav li {
-    background-color: #e0e0e0;
+    background-color: lightgrey;
     margin: 5px;
     padding: 5px;
     border: solid black 1px;
@@ -62,4 +65,17 @@ h1 {
     top: 0;
     text-align: right;
     margin-right: 5px;
+    background-color: lightcoral;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 3px;
+    color: white;
+}
+
+input[type=checkbox]+label {
+    text-decoration: none;
+}
+
+input[type=checkbox]:checked+label {
+    text-decoration: line-through;
 }
