@@ -47,6 +47,11 @@ export default class TodoList {
             checkbox.id = `task-${task.id}`;
             checkbox.value = `${task.completed}`;
 
+            checkbox.checked = false;
+            if (task.completed) {
+                checkbox.checked = true;
+            }
+
             label.innerHTML = `${task.content}`;
 
             span2.className = 'delete';
@@ -69,13 +74,13 @@ export default class TodoList {
         this.todoList = JSON.parse(localStorage.getItem('todoList'));
         if (filter === 'active') {
             this.todoList = this.todoList.filter(task => {
-                task.completed = false;
-                console.log(this.todoList);
+                return task.completed == false;
             });
         } else if (filter === 'completed') {
             this.todoList = this.todoList.filter(task => {
-                task.completed = true;
+                return task.completed == true;
             });
+            console.log(this.todoList);
         }
 
         document.querySelector('#todo-list').innerHTML = '';
