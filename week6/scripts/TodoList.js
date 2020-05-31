@@ -27,6 +27,7 @@ export default class TodoList {
         let index = this.todoList.findIndex(i => i.id === taskId);
         if (index !== -1) {
             this.todoList[index].completed = !this.todoList[index].completed;
+            document.getElementById('task-' + taskId).checked = !this.todoList[index].completed;
             localStorage.setItem('todoList', JSON.stringify(this.todoList));
         }
     }
@@ -45,7 +46,57 @@ export default class TodoList {
             checkbox.className = 'completed';
             checkbox.id = `task-${task.id}`;
             checkbox.value = `${task.completed}`;
-                  
+
+            label.innerHTML = `${task.content}`;
+
+            span2.className = 'delete';
+            span2.innerHTML = '\u00D7';
+
+            div.appendChild(checkbox);
+            div.appendChild(label);
+            div.appendChild(span2);
+
+            li.id = task.id;
+            li.appendChild(div);
+
+            document.querySelector('#todo-list').appendChild(li);
+            count++;
+        });
+        document.querySelector('#tasks-left').innerHTML = `tasks left: ${count}`;
+    }
+
+    filterList(filter) {
+        this.todoList = JSON.parse(localStorage.getItem('todoList'));
+        if (filter === 'active') {
+            this.todoList = this.todoList.filter(task => {
+                task.completed = false;
+                console.log(this.todoList);
+            });
+        } else if (filter === 'completed') {
+            this.todoList = this.todoList.filter(task => {
+                task.completed = true;
+            });
+        }
+
+        document.querySelector('#todo-list').innerHTML = '';
+        let count = 0;
+        this.todoList.forEach(task => {
+            let li = document.createElement('li');
+            let div = document.createElement('div');
+            let checkbox = document.createElement('input');
+            let label = document.createElement('label');
+            let span2 = document.createElement('span');
+
+            checkbox.type = 'checkbox';
+            checkbox.className = 'completed';
+            checkbox.id = `task-${task.id}`;
+            checkbox.value = `${task.completed}`;
+
+            checkbox.checked = false;
+            if (task.completed) {
+                checkbox.checked = true;
+            }
+
             label.innerHTML = `${task.content}`;
 
             span2.className = 'delete';
