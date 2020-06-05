@@ -1,7 +1,7 @@
 import CommentModel from './CommentModel.js';
 import CommentView from './CommentView.js';
 
-class CommentController {
+export default class CommentController {
     constructor(type, commentElementId) {
         this.type = type;
         this.commentElementId = commentElementId;
@@ -44,5 +44,3 @@ class CommentController {
         }
     }
 }
-
-export default CommentController;
