@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to Portfolio</a>
+    <h1>Week 8</h1>
+    <h3>Transforms, Transitions, Canvas, SVG, and Drag and Drop</h3>
+    <p>
+        The transform property lets you lets you translate, rotate, scale, and/or skew any element on the page.
+        Transitions
+        allow the values of CSS properties to change over time, essentially providing simple animations. CSS animations,
+        unlike transitions, allow you to control each step of an animation via keyframes.
+    </p>
+    <p>
+        If you need to paint pixels to the screen and have no concerns about the ability to retrieve and modify your
+        shapes,
+        canvas is probably the better choice. If, on the other hand, you need to be able to access and change specific
+        aspects
+        of your graphics, SVG might be more appropriate.
+    </p>
+    <p>
+        The drag and drop API allows us to specify that certain elements are draggable, and then specify what should
+        happen
+        when these draggable elements are dragged over or dropped onto other elements on the page.
+    </p>
+    <h3>Code Examples</h3>
+    <code>
+        transform: translateX(45px); // Move right 45px<br>
+        transform: translateY(-30px); // Move up 30 px<br>
+        transform: rotate(10deg) translateX(40px) scale(1.5); <br>
+        transition: transform 0.2s ease-out 50ms; <br><br>
+        @keyframes moveRight { <br>
+        from { <br>
+        transform: translateX(-50%); <br>
+        } <br>
+        to { <br>
+        transform: translateX(50%); <br>
+        } <br>
+        } <br>
+    </code> <br>
+
+    <code>
+        var canvas = document.getElementById("myCanvas"); <br>
+        var context = canvas.getContext("2d"); <br>
+        context.strokeStyle = "red"; <br>
+        context.fillStyle = "rgba(0, 0, 255, 0.5)"; <br>
+        context.fillRect(10, 10, 100, 100); <br>
+        context.strokeRect(10, 10, 100, 100); <br>
+    </code>
+
+    <h3>Team Activity</h3>
+    <a href="./team-activity.html">Star Wars API</a>
+</body>
+
+</html>

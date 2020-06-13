@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 TA</title>
+    <link rel="stylesheet" href="./styles/team-activity.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">Back to Week 8</a>
+    </header>
+    <!-- <button onclick="getAPI('https:\/\/swapi.dev\/api\/people')">Click me!</button> -->
+    <div class="apiDisplay" id="apiDisplay">
+        <h1>Star Wars Characters</h1>
+        <ul id="items">
+
+        </ul>
+        <div class="buttons">
+            <a href="#" class="previous round" id="prevBtn" onclick="getAPI(prevURL)">&#8249;</a>
+            <a href="#" class="next round" id="nextBtn" onclick="getAPI(nextURL)">&#8250;</a>
+        </div>
+    </div>
+    <div id="details">
+    </div>
+    <script src="./scripts/team-activity.js"></script>
+</body>
+
+</html>
