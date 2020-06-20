@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
   background-size: cover;
 }
 
@@ -10,6 +10,11 @@ body,html {
   font-family: sans-serif;
 }
 
+header {
+    background-color: white;
+    font-size: xxx-large;
+    padding: 10px;
+}
 
 .keys {
   display: flex;
