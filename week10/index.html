@@ -12,9 +12,12 @@
     <h1>Week 10</h1>
     <h3>Form Validation</h3>
 
-    The presence of the required attribute on any element that supports this attribute means the element matches the
-    :required pseudoclass whether it has a value or not. If the input has no value, the input will match the
-    :invalid pseudoclass.<br><br>
+    <li>
+        The presence of the required attribute on any element that supports this attribute means the element matches the
+        :required pseudoclass whether it has a value or not. If the input has no value, the input will match the
+        :invalid pseudoclass.<br><br>
+    </li>
+
     <code>
         input:invalid {<br>
         border: 2px dashed red;<br>
@@ -30,20 +33,24 @@
     </code>
 
     <h4>Regular Expressions</h4>
-    a — Matches one character that is a (not b, not aa, and so on).z<br>
-    abc — Matches a, followed by b, followed by c.<br>
-    ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)<br>
-    ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so on).<br>
-    a|b — Matches one character that is a or b.<br>
-    abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).<br><br>
+    <li>
+        a — Matches one character that is a (not b, not aa, and so on).z<br>
+        abc — Matches a, followed by b, followed by c.<br>
+        ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)<br>
+        ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so on).<br>
+        a|b — Matches one character that is a or b.<br>
+        abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).<br><br>
+    </li>
     <code>
         &#60input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry"$#62
     </code>
 
     <h3>Using Fetch</h3>
-    The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as
-    requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch
-    resources asynchronously across the network.<br><br>
+    <li>
+        The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as
+        requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch
+        resources asynchronously across the network.<br><br>
+    </li>
     <code>
         fetch('http://example.com/movies.json')<br>
         .then(response => response.json())<br>
