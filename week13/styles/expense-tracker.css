@@ -1,0 +1,49 @@
+body {
+    font-family: 'Roboto';
+    background-color: bisque;
+}
+
+#income-expense-container {
+    background-color: white;
+    display: flex;
+    border: solid black 1px;
+
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+#income-total {
+    color: #2ecc71;
+}
+
+#expense-total {
+    color: #c0392b;
+}
+
+#button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    background-color: #007bff;
+    color: white;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    ;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-bottom: 10px;
+}
