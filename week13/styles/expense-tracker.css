@@ -7,21 +7,26 @@ body {
     background-color: white;
     display: flex;
     border: solid black 1px;
-
+    border-radius: 5px;
     justify-content: space-around;
     margin: 20px 0;
     padding: 20px;
 }
 
 #income-total {
+    font-weight: 400;
+    font-size: 1.5rem;
     color: #2ecc71;
 }
 
 #expense-total {
+    font-weight: 400;
+    font-size: 1.5rem;
     color: #c0392b;
 }
 
 #button {
+    cursor: pointer;
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -29,7 +34,7 @@ body {
     vertical-align: middle;
     padding: .375rem .75rem;
     font-size: 1rem;
-    border-radius: .25rem;
+    border-radius: 5px;
     background-color: #007bff;
     color: white;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -46,4 +51,41 @@ body {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     margin-bottom: 10px;
+}
+
+#selector {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+li.income {
+    border-right: 5px solid #2ecc71;
+    border-radius: 5px;
+}
+
+li.expense {
+    border-right: 5px solid #c0392b ;
+    border-radius: 5px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#delete-btn {
+    background-color: pink;
+    border: solid black 1px;
+    border-radius: 5px;
+    margin-left: 5px;
 }
