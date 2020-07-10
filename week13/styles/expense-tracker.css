@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto';
     background-color: bisque;
+    padding-bottom: 50px;
 }
 
 #income-expense-container {
