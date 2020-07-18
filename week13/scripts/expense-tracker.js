@@ -85,7 +85,6 @@ function updateBalance() {
 }
 
 function deleteTransaction(id) {
-    console.log(id);
     transactions = transactions.filter(transaction => transaction.id !== id);
     localStorage.setItem('transactions', JSON.stringify(transactions));
     init();
