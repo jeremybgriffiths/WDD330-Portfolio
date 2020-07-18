@@ -10,10 +10,9 @@ body,html {
   font-family: sans-serif;
 }
 
-header {
+nav {
     background-color: white;
     font-size: xxx-large;
-    padding: 10px;
 }
 
 .keys {

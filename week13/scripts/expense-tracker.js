@@ -1,10 +1,12 @@
-const balance = document.getElementById('balance');
-const incomeTotal = document.getElementById('income-total');
-const expenseTotal = document.getElementById('expense-total');
-const history = document.getElementById('history-list');
-const transactionForm = document.getElementById('transaction-form');
-const description = document.getElementById('description');
-const amount = document.getElementById('amount');
+import Transaction from './transaction.js'
+
+const balance = document.querySelector('#balance');
+const incomeTotal = document.querySelector('#income-total');
+const expenseTotal = document.querySelector('#expense-total');
+const history = document.querySelector('#history-list');
+const transactionForm = document.querySelector('#transaction-form');
+const description = document.querySelector('#description');
+const amount = document.querySelector('#amount');
 
 const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
 
@@ -15,17 +17,9 @@ function addTransaction(e) {
 
     let transaction = null;
     if (document.querySelector('input[name="transaction-type"]:checked').value === 'income') {
-        transaction = {
-            id: Date.now(),
-            description: description.value,
-            amount: +amount.value
-        };
+        transaction = new Transaction(description.value, +amount.value);
     } else if (document.querySelector('input[name="transaction-type"]:checked').value === 'expense') {
-        transaction = {
-            id: Date.now(),
-            description: description.value,
-            amount: -amount.value
-        };
+        transaction = new Transaction(description.value, -amount.value);
     }
 
     transactions.push(transaction);

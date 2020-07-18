@@ -17,13 +17,13 @@ body {
 #income-total {
     font-weight: 400;
     font-size: 1.5rem;
-    color: #2ecc71;
+    color: #28a745;
 }
 
 #expense-total {
     font-weight: 400;
     font-size: 1.5rem;
-    color: #c0392b;
+    color: #dc3545;
 }
 
 #button {
@@ -50,7 +50,7 @@ body {
     line-height: 1.5;
     background-clip: padding-box;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     margin-bottom: 10px;
 }
 
@@ -70,12 +70,12 @@ li {
 }
 
 li.income {
-    border-right: 5px solid #2ecc71;
+    border-right: 5px solid #28a745;
     border-radius: 5px;
 }
 
 li.expense {
-    border-right: 5px solid #c0392b ;
+    border-right: 5px solid #dc3545 ;
     border-radius: 5px;
 }
 
@@ -85,8 +85,15 @@ li.expense {
 }
 
 #delete-btn {
-    background-color: pink;
-    border: solid black 1px;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid black;
+    font-size: 1rem;
+    background-color: #dc3545;
+    color: white;
     border-radius: 5px;
     margin-left: 5px;
 }
