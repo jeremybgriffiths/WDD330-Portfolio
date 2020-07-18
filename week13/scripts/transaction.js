@@ -1,7 +1,7 @@
-export default class Transaction {
+export class Transaction {
     constructor(description, amount) {
-        id: Date.now();
-        description: description;
-        amount: amount;
+        this.id = Date.now();
+        this.description = description;
+        this.amount = amount;
     }
 }
